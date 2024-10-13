@@ -510,7 +510,7 @@ string Polynomial::polyToString(){
             if (curr->exponent != 0) {  // 不为常数项
                 if (curr->coefficient != 1 && curr->coefficient != -1) {
                     ostringstream ss;
-                    ss << setprecision(2) << curr->coefficient;
+                    ss << fixed << setprecision(2) << curr->coefficient;
                     ret += ss.str();  // 输出系数
                 } else if (curr->coefficient == -1) {
                     ret += "-";  // 输出负号
